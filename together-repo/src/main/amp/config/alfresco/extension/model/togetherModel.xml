@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xsi:schemaLocation="http://www.alfresco.org/model/dictionary/1.0 modelSchema.xsd" -->
+<model name="tg:togethermodel" 
+       xmlns="http://www.alfresco.org/model/dictionary/1.0" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+   <description>Together JS Content Domain Model</description>
+   <author>CristinaMR</author>
+   <published>2014-10-07</published>
+   <version>1.0</version>
+
+   <imports>
+      <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+   </imports>
+   
+   <namespaces>
+      <namespace uri="org.alfresco.together" prefix="tg"/>
+   </namespaces>
+   
+   <types>
+      <type name="tg:chat">
+         <title>Chat</title>
+         <parent>cm:content</parent>
+         <properties>
+         </properties>
+      </type>
+   </types>
+
+</model>

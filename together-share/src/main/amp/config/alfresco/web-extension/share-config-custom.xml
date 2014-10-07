@@ -1,0 +1,42 @@
+<alfresco-config>
+
+	 <config evaluator="string-compare" condition="DocumentLibrary" replace="true">
+	    <types>
+	        <type name="cm:content">
+	            <subtype name="tg:togethermodel" label="Together JS"/>
+	        </type>
+	        <type name="cm:folder"> </type>
+	    </types>
+	 </config>
+
+    <config evaluator="node-type" condition="tg:chat">
+        <set id="tgPanelRoot" appearance="bordered-panel" label="Chat"/>
+        <forms>
+            <form>
+                <field-visibility>
+                    <!-- add the fields we want back in so that they are displayed -->
+                    <show id="tg:idChat"/>
+                    <show id="cm:name"/>
+                    <show id="cm:description"/>
+                    <show id="cm:author"/>
+                    <show id="cm:created"/>
+                    <show id="cm:modifier"/>
+                    <show id="cm:modified"/>
+                    <hidden id="cm:creator"/>
+                    <hidden id="mimetype"/>
+                    <hidden id="cm:titled"/>
+                </field-visibility>
+                <appearance>
+                    <set id="tgPanel" appearance="fieldset" label="Chat details"/>
+                   		<field id="tg:idChat" set="tgPanel" label="Chat ID" />
+                   		<field id="cm:name" set="tgPanel" label="Name" />
+                   		<field id="cm:description" set="tgPanel" label="Description" />
+                   		<field id="cm:created" set="tgPanel" label="Created on" />
+                   		<field id="cm:modifier" set="tgPanel" label="Last modifier" />
+                   		<field id="cm:modified" set="tgPanel" label="Last modified" />
+                </appearance>
+            </form>
+        </forms>
+    </config>
+</alfresco-config>
+
